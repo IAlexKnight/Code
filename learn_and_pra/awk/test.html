@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>找资源 - 微盘</title>
+<meta name="title" content="新浪微盘 | 免费网盘" />
+<meta name="description" content="微盘是一款简单易用的网盘，提供超大免费云存储空间，支持电脑、手机等任意终端的文件存储、同步和分享，是您工作、学习、生活 的必备工具！" />
+<meta name="Keywords" content="微盘|网盘|我的网盘|免费网络硬盘|热门分享|微盘登陆|新浪微盘登陆|新浪微盘下载|威盘|我的微盘|微盘下载" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+<script type="text/javascript">
+     try{document.execCommand("BackgroundImageCache", false, true);}catch(e){}
+</script>
+<link rel="icon" href="http://vdisk.weibo.com/favicon.ico" type="image/x-icon" />
+<link href="http://img.t.sinajs.cn/t5/style/css/module/global/WB_outframe.css?version=e93f08d7593eddf7" type="text/css" rel="stylesheet" />
+<link href="http://lib.cdn.weipan.cn/web/1002/css/vdisk_v2.css?v=1497346914210" type="text/css" rel="stylesheet" />
+<link href="http://lib.cdn.weipan.cn/web/1002/css/vdisk_new_v2.css?v=1497346914210" type="text/css" rel="stylesheet" />
+
+<style type="text/css">
+.WB_global_nav{z-index:9998 !important;}
+</style>
+
+<script type="text/javascript">
+    //v2
+    var UID = 0,
+        UNAME = '',
+        CURRENT_URL = 'vdisk.weibo.com/',
+        APP_URL = 'http://vdisk.weibo.com/',
+        STATIC_URL = 'http://lib.cdn.weipan.cn/web/1002/',
+        STATIC_VERSION = '1497346914210',
+        ENV = 'prod';
+
+    //全局数据
+    var uid=0;
+    var uname='';
+    var siteurl='http://vdisk.weibo.com/';
+    var staticUrl='http://lib.cdn.weipan.cn/web/1002/';
+    var vdisk = {};    
+    // v6
+    var $CONFIG = {
+            name: "",
+            onick: "",
+            uid: uid,
+            islogin: uid?'1':false,
+            icon: 'http://tp3.sinaimg.cn/'+uid+'/50/0/1',
+            lang: "zh-cn",
+            rbackurl: window.location.href,
+            //entry: 'weipan',
+            _wv:"6"
+    };
+    var SEND_ACTIVITY = "";
+    var SIGN = 'ab2817b3fb8a4160952cf246cafc310e.1499133470';
+</script>
+
+<script src="http://lib.cdn.weipan.cn/web/1002/js/2/lib/jquery-1.7.2.min.js?v=1497346914210" type="text/javascript"></script>
+<script src="http://lib.cdn.weipan.cn/web/1002/js/2/lib/seajs/sea.js" data-config="http://lib.cdn.weipan.cn/web/1002/js/2/config.js?v=1497346914210" type="text/javascript" ></script>
+
+<script type="text/javascript" src="http://js.t.sinajs.cn/t6/home/js/pl/top/topInit.js?v=f2fdf6c2f04f99c8"></script>
+<script>
+$(document).ready(function(){
+
+		typeof WBtopGlobal !== 'undefined' && WBtopGlobal && WBtopGlobal.init($CONFIG);
+});
+if (self != top) { 
+top.location = self.location; 
+} 
+</script>
+</head>
+<body class="vd_hotshare">
+<!-- v6头部 -->
+<div id="weibo_top_public" class="global_header"></div>
+<!-- v6头部 -->
+<!--<div class="vd_wrap clearfix">-->
+<!--vd_main-->
+<div class="vd_main">
+     <!--vd toplogo-->
+     <div class="vdisk_header_main clearfit" >
+          <div class="vdisk_logo"><a href="http://vdisk.weibo.com/" title="微盘"></a></div>
+          <ul class="vdisk_nav_main clearfit">
+       			              <li ><a href="http://vdisk.weibo.com/file/list?log_target=navigation_vdisk" class="vd_pic_v2 vdisk_nav_my private_link" title="我的微盘"></a></li>
+             <li id="menuHotShare" class="vdisk_nav_select"><a href="http://vdisk.weibo.com/share/hot?log_target=navigation_hot_file" class="vd_pic_v2 vdisk_nav_share" title="找资源"></a></li>
+             <li id="menuClient" ><a href="http://vdisk.weibo.com/client?log_target=navigation_client" class="vd_pic_v2 vdisk_nav_clien" title="客户端"></a></li>
+             <li class="vd_bt_v2 vdisk_nav_search">
+				<form action="http://vdisk.weibo.com/search/" method="get" id="search_form" onsubmit="if((document.getElementById('search_keyword').value == '') && (typeof vdisk.topSearch == 'undefined')) return false;">
+				<input type="hidden" name="type" id="search_type" value="public" />
+					<input type="text" maxlength="30" autocomplete="off" name="keyword" id="search_keyword"  defaultchars="搜索大家共享的文件" value="" class="vdisk_nav_search_input" />
+					<!--  -->
+					<input type="submit" class="bn vd_pic_v2 vdisk_nav_search_btn" value="">
+				</form>
+             </li>
+             <li class="vd_pic_v2 vdisk_nav_arrow vdisk_nav_arrow_share" style=""></li>
+          </ul>
+		  <div id="pageLoading" style="display:none"><span>加载中...</span></div>
+     </div>
+     <!--vd toplogo end-->
+	 <!--vd part--><!--<br>
+<div class="advertise-list">
+	<div class="advertise-item">
+			<script type="text/javascript">var jd_union_unid="301476122",jd_ad_ids="1360:6",jd_union_pid="CMqC2Z32KRCa0uCPARoAILH3xp0BKgA=";var jd_width=336;var jd_height=280;var jd_union_euid=""; var p="ABAGUBtfFAEXN1Eaa0pGT1plRB9IXyJDB1oJJV1WWggrRUl2d29SQANwYGBDT3MwYncbTBViDRkOIgVUG14SChMPXStZFAIXAVIbWBYyImYnKxB7CiI3VR5eFAcbAF0ZWBwCETdU";</script><script type="text/javascript" charset="utf-8" src="http://x.jd.com/static/js/cpc.js"></script>
+	</div>
+</div>-->
+ <!--vd part-->
+<link href="http://lib.cdn.weipan.cn/web/1002/css/vip.css" type="text/css" rel="stylesheet" />
+	 <!--<div class="vdmain_part_center clearfit">-->
+<div class="vdmain_part find_file_main">
+    <div class="vdmain_part_main clearfix">
+		<div class="vd_left_part">
+			
+<div class="ff_recommend_box">
+	<div class="vd_left_part_t"></div>
+	<div class="ff_recommend">
+		<div class="tit"><h2>小编推荐</h2></div>
+		<div class="ff_recommend_list">
+			<ul class="clearfix">
+								<li>
+					<div class="pic"><a target="_blank" href="http://vdisk.weibo.com/s/ActTZL8HzpUE?recommend" title="CG漫画人物技法讲座+上色教程.zip"><img src="http://vdiskme2-sto.stor.sinaapp.com/editor_recommend/pic/20170607/0b216ebea503daa30b5303e1993d1f84.jpg" width="120" height="120"></a></div>
+					<div class="name"><a target="_blank" href="http://vdisk.weibo.com/s/ActTZL8HzpUE?recommend" title="CG漫画人物技法讲座+上色教程.zip">CG漫画人物技法讲座+上色教程.zip</a></div>
+					<div class="down">浏览量：<span class="num">21767</span></div>
+				</li>
+								<li>
+					<div class="pic"><a target="_blank" href="http://vdisk.weibo.com/s/aHiUZcNM1rt2Z?recommend" title="高中物理电磁感应公式总结.doc"><img src="http://vdiskme2-sto.stor.sinaapp.com/editor_recommend/pic/20170607/56f5cdf1b9092d9af2ae8ac9ab971961.jpg" width="120" height="120"></a></div>
+					<div class="name"><a target="_blank" href="http://vdisk.weibo.com/s/aHiUZcNM1rt2Z?recommend" title="高中物理电磁感应公式总结.doc">高中物理电磁感应公式总结.doc</a></div>
+					<div class="down">浏览量：<span class="num">25846</span></div>
+				</li>
+								<li>
+					<div class="pic"><a target="_blank" href="http://vdisk.weibo.com/s/dU4i1QKxG3ZR?recommend" title="四六级最后要记的100个单词.doc"><img src="http://vdiskme2-sto.stor.sinaapp.com/editor_recommend/pic/20170607/7f6fba9647bd4bd0f55ca21b56de33e8.jpg" width="120" height="120"></a></div>
+					<div class="name"><a target="_blank" href="http://vdisk.weibo.com/s/dU4i1QKxG3ZR?recommend" title="四六级最后要记的100个单词.doc">四六级最后要记的100个单词.doc</a></div>
+					<div class="down">浏览量：<span class="num">30043</span></div>
+				</li>
+								<li>
+					<div class="pic"><a target="_blank" href="http://vdisk.weibo.com/s/z7RkGcE4Mt5tL?recommend" title="8款Photoshop火焰笔刷.rar"><img src="http://vdiskme2-sto.stor.sinaapp.com/editor_recommend/pic/20170607/a9e54121666f9ebc6c866bc2a45cd896.jpg" width="120" height="120"></a></div>
+					<div class="name"><a target="_blank" href="http://vdisk.weibo.com/s/z7RkGcE4Mt5tL?recommend" title="8款Photoshop火焰笔刷.rar">8款Photoshop火焰笔刷.rar</a></div>
+					<div class="down">浏览量：<span class="num">25745</span></div>
+				</li>
+								<li>
+					<div class="pic"><a target="_blank" href="http://vdisk.weibo.com/s/z7RkGcE4MYIhV?recommend" title="18种惊人的Photoshop闪电笔刷.zip"><img src="http://vdiskme2-sto.stor.sinaapp.com/editor_recommend/pic/20170607/1d6ae013504623a155b3a56fc4170a37.jpg" width="120" height="120"></a></div>
+					<div class="name"><a target="_blank" href="http://vdisk.weibo.com/s/z7RkGcE4MYIhV?recommend" title="18种惊人的Photoshop闪电笔刷.zip">18种惊人的Photoshop闪电笔刷.zip</a></div>
+					<div class="down">浏览量：<span class="num">32297</span></div>
+				</li>
+								<li>
+					<div class="pic"><a target="_blank" href="http://vdisk.weibo.com/s/z7RkGcE4Gv_Cu?recommend" title="100多款超赞的photoshop油漆喷墨效果笔刷.rar"><img src="http://vdiskme2-sto.stor.sinaapp.com/editor_recommend/pic/20170607/0dfc1356dd4c59488c6d58704a4bee6d.jpg" width="120" height="120"></a></div>
+					<div class="name"><a target="_blank" href="http://vdisk.weibo.com/s/z7RkGcE4Gv_Cu?recommend" title="100多款超赞的photoshop油漆喷墨效果笔刷.rar">100多款超赞的photoshop油漆喷墨效果笔刷...</a></div>
+					<div class="down">浏览量：<span class="num">32298</span></div>
+				</li>
+								<li>
+					<div class="pic"><a target="_blank" href="http://vdisk.weibo.com/s/uMngZDbCqM?recommend" title="不得不知道的文学常识.doc"><img src="http://vdiskme2-sto.stor.sinaapp.com/editor_recommend/pic/20170607/31e7f989b622c3196bc66d652e49a280.jpg" width="120" height="120"></a></div>
+					<div class="name"><a target="_blank" href="http://vdisk.weibo.com/s/uMngZDbCqM?recommend" title="不得不知道的文学常识.doc">不得不知道的文学常识.doc</a></div>
+					<div class="down">浏览量：<span class="num">322623</span></div>
+				</li>
+								<li>
+					<div class="pic"><a target="_blank" href="http://vdisk.weibo.com/s/ahNyypCZA5b4Z?recommend" title="【宇宙笔刷】星系星空、宇宙银河photoshop笔刷素材.rar"><img src="http://vdiskme2-sto.stor.sinaapp.com/editor_recommend/pic/20170601/d92412f5461ff53231587efafe3a215a.jpg" width="120" height="120"></a></div>
+					<div class="name"><a target="_blank" href="http://vdisk.weibo.com/s/ahNyypCZA5b4Z?recommend" title="【宇宙笔刷】星系星空、宇宙银河photoshop笔刷素材.rar">【宇宙笔刷】星系星空、宇宙银河photoshop...</a></div>
+					<div class="down">浏览量：<span class="num">25309</span></div>
+				</li>
+							</ul>
+		</div>
+	</div>
+    <div class="vd_left_part_b"></div>
+</div>
+
+<!-- 广告 start -->
+	<!-- import sinaads.js start-->
+	<script>(function(d,s,id){var s,n=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;s=d.createElement(s);s.id=id;s.setAttribute('charset','utf-8');s.src='//d'+Math.floor(0+Math.random()*(9-0+1))+'.sina.com.cn/litong/zhitou/sinaads/release/sinaads.js';n.parentNode.insertBefore(s,n);})(document,'script','sinaads-script');</script>
+	<!-- import sinaads.js end-->
+	<div class="add_adv">
+		<div class="vd_left_part_t"></div>
+		<div class="ff_recommend">
+			<div class="adv_pic_box">
+				<!-- 通栏 640*90 jiliang1 20170504 start -->
+				<ins class="sinaads" data-ad-pdps="PDPS000000060095"></ins>
+				<script>(sinaads = window.sinaads || []).push({});</script>
+				<!-- 通栏 640*90   end -->
+			</div>
+		</div>
+		<div class="vd_left_part_b"></div>
+	</div>
+<!-- 广告 end -->
+
+<div class="ff_category_rec_box clearfix">
+	<div class="ff_category_rec clearfix" id="six_bread">
+	</div>
+</div>
+<script type="text/javascript">
+seajs.use(['2/page/hotfilemain'],function(hotfilemain){
+	hotfilemain.init([{"pid":1,"cid":-1,"cname":"\u6559\u80b2\/\u5b66\u4e60"},{"pid":1,"cid":9,"cname":"\u5916\u8bed\u5b66\u4e60"},{"pid":2,"cid":-1,"cname":"\u804c\u573a\/\u529e\u516c"},{"pid":5,"cid":-1,"cname":"IT\/\u4e92\u8054\u7f51"},{"pid":4,"cid":28,"cname":"\u7ecf\u7ba1\u8425\u9500"},{"pid":0,"cid":-1,"cname":"\u5168\u90e8"}]);
+});
+</script>		</div>
+		<div class="vd_right_part">
+			
+	<div class="ff_rightModule">
+		<div class="ff_rightModule_t"></div>
+		<div class="ff_rightModule_c ff_category_box">
+						<div class="category_box">
+				<h2 id="navigation_1"><span class="icon_even"></span>
+				<a target="_blank" href="http://vdisk.weibo.com/share/hot?cid=1&right_recd">教育/学习</a></h2>
+				<div class="sub_category clearfix">
+																							<a id="navigation_6" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=6&right_recd">高等教育</a>
+											<span class="v_line">|</span>												<a id="navigation_7" style="width:90px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=7&right_recd">高中教育</a>
+																							<a id="navigation_8" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=8&right_recd">考试资源</a>
+											<span class="v_line">|</span>												<a id="navigation_9" style="width:90px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=9&right_recd">外语学习</a>
+																							<a id="navigation_10" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=10&right_recd">小学初中</a>
+											<span class="v_line">|</span>												<a id="navigation_11" style="width:90px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=11&right_recd">学术研究</a>
+																							<a id="navigation_12" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=12&right_recd">其他资料</a>
+									</div>
+			</div>
+						<div class="category_box">
+				<h2 id="navigation_2"><span class="icon_odd"></span>
+				<a target="_blank" href="http://vdisk.weibo.com/share/hot?cid=2&right_recd">职场/办公</a></h2>
+				<div class="sub_category clearfix">
+																							<a id="navigation_13" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=13&right_recd">PPT专区</a>
+											<span class="v_line">|</span>												<a id="navigation_14" style="width:90px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=14&right_recd">求职/职场</a>
+																							<a id="navigation_15" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=15&right_recd">企业文书</a>
+											<span class="v_line">|</span>												<a id="navigation_16" style="width:90px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=16&right_recd">个人文书</a>
+																							<a id="navigation_19" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=19&right_recd">表格/模版</a>
+									</div>
+			</div>
+						<div class="category_box">
+				<h2 id="navigation_3"><span class="icon_even"></span>
+				<a target="_blank" href="http://vdisk.weibo.com/share/hot?cid=3&right_recd">生活娱乐</a></h2>
+				<div class="sub_category clearfix">
+																							<a id="navigation_20" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=20&right_recd">生活百科</a>
+											<span class="v_line">|</span>												<a id="navigation_21" style="width:90px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=21&right_recd">娱乐</a>
+																							<a id="navigation_22" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=22&right_recd">图片</a>
+											<span class="v_line">|</span>												<a id="navigation_23" style="width:90px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=23&right_recd">文学/小说</a>
+																							<a id="navigation_24" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=24&right_recd">音乐</a>
+											<span class="v_line">|</span>												<a id="navigation_" style="width:90px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=&right_recd"></a>
+																							<a id="navigation_26" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=26&right_recd">游戏</a>
+									</div>
+			</div>
+						<div class="category_box">
+				<h2 id="navigation_4"><span class="icon_odd"></span>
+				<a target="_blank" href="http://vdisk.weibo.com/share/hot?cid=4&right_recd">专业资料</a></h2>
+				<div class="sub_category clearfix">
+																							<a id="navigation_27" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=27&right_recd">人文社科</a>
+											<span class="v_line">|</span>												<a id="navigation_28" style="width:90px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=28&right_recd">经管营销</a>
+																							<a id="navigation_29" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=29&right_recd">工程技术</a>
+											<span class="v_line">|</span>												<a id="navigation_30" style="width:90px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=30&right_recd">医学/健康</a>
+																							<a id="navigation_31" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=31&right_recd">农业养殖</a>
+											<span class="v_line">|</span>												<a id="navigation_32" style="width:90px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=32&right_recd">基础科学</a>
+																							<a id="navigation_33" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=33&right_recd">其他</a>
+									</div>
+			</div>
+						<div class="category_box">
+				<h2 id="navigation_5"><span class="icon_even"></span>
+				<a target="_blank" href="http://vdisk.weibo.com/share/hot?cid=5&right_recd">IT/互联网</a></h2>
+				<div class="sub_category clearfix">
+																							<a id="navigation_34" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=34&right_recd">行业报告</a>
+											<span class="v_line">|</span>												<a id="navigation_35" style="width:90px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=35&right_recd">技术分享</a>
+																							<a id="navigation_36" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=36&right_recd">手机应用</a>
+											<span class="v_line">|</span>												<a id="navigation_37" style="width:90px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=37&right_recd">常用软件</a>
+																							<a id="navigation_38" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=38&right_recd">源代码</a>
+											<span class="v_line">|</span>												<a id="navigation_39" style="width:90px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=39&right_recd">电子商务</a>
+																							<a id="navigation_40" style="width:80px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=40&right_recd">传媒/营销</a>
+											<span class="v_line">|</span>												<a id="navigation_41" style="width:90px;" target="_blank" href="http://vdisk.weibo.com/share/hot?cid=41&right_recd">产品/网页设计</a>
+									</div>
+			</div>
+					</div>
+		<div class="ff_rightModule_b"></div>
+    </div>
+
+			<!-- <div class="ff_rightModule">
+    <div class="ff_rightModule_t"></div>
+    <div class="border feedNumWrap ff_rightModule_c">
+		<dl>
+			<dt style="display:none;" id="tab_share_hot" class="current"><a href="/share/hot"><i class="vd_pic_v2 ico_share_re">找资源</i><span class="feedNum"><font>0</font></span></a></dt>
+			<dt id="tab_share_new" class="feednumwrap_line"><a href="/share/recent"><i class="vd_pic_v2 ico_share_new" style="float:left">最新分享</i><span style="display:none;" class="feedNum"><font>0</font></span></a></dt>
+			<dt id="tab_share_fd" ><a class="private_link" href="/share/friend"><i class="vd_pic_v2 ico_share_follow">关注人的分享</i><span style="display:none;" class="feedNum"><font>0</font></span></a></dt>
+		</dl>
+    </div>
+    <div class="ff_rightModule_b"></div>
+</div> -->
+			<div style="display:none" class="ff_rightModule" id="pop_user_container">
+	<div class="ff_rightModule_t"></div>
+    <div class="ff_rightModule_c W_rightModule">
+		<div class="title"><a class="right" id="pop_user_next" href="javascript:;">换一换</a>微盘分享达人</div>
+		<div id="topshareList">
+		</div>
+    </div>  
+   <div class="ff_rightModule_b"></div>
+</div>            			<div class="ff_rightModule ff_rightModule_last">
+	<div class="ff_rightModule_t"></div>
+   <div class="ff_rightModule_c vd_client_main vd_right_line">
+		<div class="vd_client_head clearfit"><h2>微盘客户端</h2><a href="/client">详情<span>&gt;&gt;</span></a></div>
+		<ul class="vd_client_body">
+		   <li><a href="http://vdisk.weibo.com/client?device=ios" class="vd_pic_v2 vd_ios"><i>iOS版</i></a></li>
+		   <li><a href="http://vdisk.weibo.com/client?device=android" class="vd_pic_v2 vd_android"><i>Android版</i></a><span class=""></span></li>
+		  <!--  <li><a href="http://vdisk.weibo.com/client?device=air" class="vd_pic_v2 vd_desk"><i>桌面Air版</i></a><span class=""></span></li> -->
+		</ul>
+   </div>
+   <div class="ff_rightModule_b"></div>
+</div>		</div>
+	</div>
+
+	 <!-- /vdmain -->
+	<!--<div class="vdmain_part_bottom"></div>-->
+	<div class="advertise-list vd_ads" data-time="3" data-count="1" data-position="hotshare-bottom-banner-1">
+		<div class="advertise-item" id="hotshare-bottom-banner-1-0" >
+				
+		<a href="http://vdisk.weibo.com/analyse/redirect?s=xvZUVenSK77rgnepkkDO9pteirZ6jdOdviZzkGGoM0G8P7nZ-UiH013ARec-0Gcycko4BhXJgrE8xM2V9gmbF7SVeeukV_F6SzEFVwqyHZ_Kaw0EvE-S-nNx3MpKMPV6" target="_blank" ><img src="http://vdiskme2-sto.stor.sinaapp.com/ads/20121216/c327fb097b26ad3d1a628a08d4690656.jpg" width="950" height="90" /></a>
+		
+			</div>
+	</div>
+<!--会员过期提示浮层-->
+<div id="remind_block" class="W_layer ali_pay_layer pay_fail_layer" style="top:100px;left:400px;display: none;">
+	<div class="pay_vip vip_icon"></div>
+    <p class="txt1">您的VIP会员已过期，是否续费？</p>
+    <div class="pay_btn">
+    	<a href="http://vdisk.weibo.com/member/index" title="是">是</a>
+    	<a onclick="close_remind()" title="否">否</a>
+    </div>
+</div>
+<div id="remind_bg" style="display: none; z-index: 199; top: 0pt; left: 0pt; position: fixed; height: 100%; width: 100%; opacity: 0.46;filter:alpha(opacity=46); background-color: rgb(0, 0, 0);"></div>
+<script type="text/javascript" >
+function close_remind()
+{
+	$('#remind_block').hide();
+	$('#remind_bg').hide();
+}
+</script>
+	 <div class="vd_footer">
+		  <div class="clearfit">
+			  <div class="vd_footer_link">
+				<!-- <a href="#">帮助</a><a href="#">意见反馈</a><a href="#">微博认证及合作</a><a href="#">新浪网导航</a><a href="#">不良信息举报</a> -->
+					<a target="_blank" href="/useHelpTip?log_target=navigation_vdisk">使用协议</a>&nbsp|&nbsp
+					<a target="_blank" href="http://weibo.com/wepan">@微盘官方微博</a>&nbsp|&nbsp
+					<a target="_blank" href="http://vdisk.weibo.com/uplog">更新日志</a>&nbsp|&nbsp
+					<a target="_blank" href="http://help.weibo.com/topic/vdisk">帮助</a>&nbsp|&nbsp
+					<a target="_blank" href="http://vdisk.weibo.com/feedback">意见反馈</a>&nbsp|&nbsp
+					<a target="_blank" href="/switchmobile/on">wap版</a>&nbsp|&nbsp
+					<a target="_blank" href="/cooperation">对外合作</a>&nbsp|&nbsp
+					<a target="_blank" href="http://vdisk.weibo.com/developers/">开放平台</a>&nbsp|&nbsp
+					<!--<a target="_blank" href="http://weibo.com/pub/i/zt/wbpy">不良信息举报</a>　-->
+					<!--<a target="_blank" id="button_manage_hr" href="http://vdisk.weibo.com/hr" class="hash">招聘</a>&nbsp|&nbsp-->
+					<a target="_blank" id="button_manage_hr" href="http://vdisk.weibo.com/useHelpNotice" class="hash">产品调整公告</a>&nbsp|&nbsp
+					<a target="_blank" href="http://vdisk.weibo.com/archive?page=1">Archive</a>
+			  </div>
+			  <div class="vd_footer_copy">&copy; 2017 微盘 版权所有</div>
+		  </div>
+		  <p>
+		  <span style="float:left;">
+		    用户应遵守著作权法，尊重著作权人合法权益，不违法上传、存储并分享他人作品。举报邮箱：vdisk@sina.cn
+		  </span>
+		  京网文[2011]0398-130号 京ICP证100780号</p>
+	 </div>
+	<!--/vd part end-->
+</div>
+<!--/vd_main-->
+</div>
+
+<a href="javascript:void(0)" class="vd_scrolltop goTop" style="visibility:hidden"><span class="vd_pic_v2"></span>返回顶部</a>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	seajs.use(['2/vdisk'],function(vdisk){
+		vdisk.init();
+		vdisk.delayLoad();
+		
+		if(vdisk.getQueryValue("log_target")){
+			var statparamuid = '';
+			if(uid!='') statparamuid = '&statuid=' + uid;
+			var logUrl = 'http://vdisk.weibo.com/images/log/ulog.gif?' + vdisk.getQueryValue("log_target") + statparamuid;
+			vdisk.log(logUrl);
+		}
+	});
+	
+	if($('#search_keyword').length){
+    	seajs.use(['vdisk/searchList'],function(searchList){
+    		//初始化搜索界面
+    		$('#search_keyword').searchField({
+    			requestURL:'http://vdisk.weibo.com/searchlist/'
+    		});
+    	});
+    }
+});
+</script>
+<div style="display:none;">
+<script src="http://s19.cnzz.com/stat.php?id=3212592&web_id=3212592" language="JavaScript"></script>
+</div>
+<!-- SUDA_CODE_START -->
+<noScript>
+<div style='position:absolute;top:0;left:0;width:0;height:0;visibility:hidden'><img width="0" height="0" src="http://beacon.sina.com.cn/a.gif?noScript" border="0" /></div> 
+</noScript>
+<!-- SUDA_CODE_END -->
+<script type="text/javascript">
+  // var _gaq = _gaq || [];
+  // _gaq.push(['_setAccount', 'UA-28230033-1']);
+  // _gaq.push(['_trackPageview']);
+  // (function() {
+  //   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  //   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  //   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  // })();
+</script>
+</body>
+</html>
