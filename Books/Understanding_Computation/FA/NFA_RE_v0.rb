@@ -96,6 +96,10 @@ class Empty
 	''
     end
 
+    def inspect
+	"/#{self}/"
+    end
+
     def precedence
 	3
     end
@@ -115,6 +119,10 @@ class Literal < Struct.new(:character)
 	character
     end
 
+    def inspect
+	"/#{self}/"
+    end
+    
     def precedence
 	3
     end
@@ -135,6 +143,10 @@ class Concatenate < Struct.new(:first, :second)
 	[first, second].map { |pattern| pattern.bracket(precedence) }.join
     end
 
+    def inspect
+	"/#{self}/"
+    end
+    
     def precedence
 	1
     end
@@ -162,6 +174,10 @@ class Choose < Struct.new(:first, :second)
 	[first, second].map{ |pattern| pattern.bracket(precedence) }.join('|')
     end
 
+    def inspect
+	"/#{self}/"
+    end
+    
     def precedence
 	0
     end
@@ -190,6 +206,10 @@ class Repeat < Struct.new(:pattern)
 	pattern.bracket(precedence) + '*'
     end
 
+    def inspect
+	"/#{self}/"
+    end
+    
     def precedence
 	2
     end
