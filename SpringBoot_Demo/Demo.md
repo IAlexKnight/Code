@@ -6,6 +6,17 @@ Spring had been often criticized for being a XML metadata configuration oriented
 
 #### Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run". The main idea is "convention over configuration"（约定大于配置）.
 
+### Common Dependencies 
+- spring-boot-starter-web:support for full-stack web development, including Tomcat and Spring-webmvc  
+- spring-boot-starter-mail:support for javax.mail  
+- spring-boot-starter-ws: support for Spring Web Services  
+- spring-boot-starter-test:support for test frameworks，includng JUnit，Hamcrest, Mockito and so on  
+- spring-boot-starter-actuator:Provide production-ready features such as metrics, health checks and externalized configuration  
+- spring-boot-starter-jetty:support for jetty  
+- spring-boot-starter-log4j:default log framework（logback） 
+
+
+
 ### Pros
 - Out-of-the-box, start a spring project quite easily and quickly
 	- Not that much XML (automatically configure Spring whenever possible)
@@ -26,17 +37,9 @@ Spring had been often criticized for being a XML metadata configuration oriented
 - Spring Boot sticks good with microservices, which means it may not be quite suitable for large projects.
 
 
-### Common Dependencies 
-- spring-boot-starter-web:support for full-stack web development, including Tomcat and Spring-webmvc  
-- spring-boot-starter-mail:support for javax.mail  
-- spring-boot-starter-ws: support for Spring Web Services  
-- spring-boot-starter-test:support for test frameworks，includng JUnit，Hamcrest, Mockito and so on  
-- spring-boot-starter-actuator:Provide production-ready features such as metrics, health checks and externalized configuration  
-- spring-boot-starter-jetty:support for jetty  
-- spring-boot-starter-log4j:default log framework（logback） 
 
 
-# Micro Services Introduction 
+# Micro Services  
 
 Quite easy to set up a micro service using Spring, Spring Boot and Spring Cloud.  
 Much of Spring Boot is aimed at developer productivity by making common concepts, like RESTful HTTP and embedded web application runtimes, easy to wire up and use. The Spring Boot team has provided a convenient mechanism for getting started with building applications, known as the Spring Initializr. 
